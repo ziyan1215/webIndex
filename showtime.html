@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示系统当前时间</title>
+	<style type="text/css">
+	#showtime{
+		width: 400px;
+		height: 14px;
+		font-size: 12px;
+		background-color: gray;
+	}
+	#lefttime{
+		width: 400px;
+		height: 20px;
+		font-size: 12px;
+		
+		background-color: yellow;
+	}
+	#presstime{
+		width: 400px;
+		height: 20px;
+		font-size: 12px;
+		
+		background-color: green;
+	}
+	strong{
+		color: red;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		
+	 		showTime();
+	 		leftTime();
+	 		pressTime();
+
+	}
+	function showTime(){
+		var myTime = new Date();
+	 	var year = myTime.getFullYear()
+	 		month = myTime.getMonth()+1
+	 		day = myTime.getDate()
+	 		week = myTime.getDay()//0-6
+	 		h = myTime.getHours()
+	 		m = myTime.getMinutes()
+	 		s = myTime.getSeconds();
+	 		var weekday = new Array(7);
+	 		weekday[0] ="星期天";
+	 		weekday[1] ="星期一";
+	 		weekday[2] ="星期二";
+	 		weekday[3] ="星期三";
+	 		weekday[4] ="星期四";
+	 		weekday[5] ="星期五";
+	 		weekday[6] ="星期六";
+	 		m = checkTime(m);
+	 		s = checkTime(s);
+	 		document.getElementById('showtime').innerHTML=year+'年'+month+'月'+day+'日'+weekday[week]+h+':'+m+':'+s;
+	 		setTimeout('showTime()',500); //形式2 setTimeout('showTime()',500)
+	}
+
+	function checkTime(i){
+		if(i<10){
+			i='0'+i;
+		}
+		return i;
+	}
+
+	function leftTime(){
+		var curtime = new Date()
+			endtime = new Date("2016 10 1 "); //加了引号的日期如"2016,5,22"显示的就是2016年5月22日，不加引号其实显示的是2016年6月22日,会加1
+			//一天=24小时 一小时=60分 一分钟=60秒 1秒=1000毫秒   getTime（）获取的是毫秒
+			//lefttime（毫秒）=？天    天=lefttime/24/60/60/1000
+		var lefttime =Math.ceil( (endtime.getTime() - curtime.getTime())/(24*60*60*1000));	//现在的结果还不是整数，所以要用Math.ceil向上取整
+
+		document.getElementById('lefttime').innerHTML="距离国庆节还有"+'<strong>'+lefttime+'</strong>'+'天';						
+	}
+
+	function pressTime(){
+		var curtime = new Date()
+			endtime = new Date("2016/8/1,00:00:00") //结束时间
+			lefttime = parseInt((endtime.getTime() - curtime.getTime())/1000) //获取剩余的总毫秒数
+			//一天的总毫秒=24小时*60分钟*60秒*1000毫秒
+			d = parseInt(lefttime/(24*60*60))
+			h = parseInt(lefttime/(60*60)%24)
+			m = parseInt(lefttime/60%60)
+			s = parseInt(lefttime%60);			
+		console.log(lefttime);
+	document.getElementById('presstime').innerHTML="还剩"+d+"天"+h+"小时"+m+"分钟"+s+"秒";
+	if(lefttime<=0){
+		document.getElementById('presstime').innerHTML="倒计时结束";
+	}
+		setTimeout(pressTime,500);
+	}
+			
+	
+	</script>
+		
+</head>
+<body>
+	<div id="showtime"></div>
+	<div id="lefttime"></div>
+	<div id="presstime"></div>
+</body>
+</html>
