@@ -2,177 +2,86 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>徐梓焱博客demo</title>
-	<script>
-	document.execCommand("BackgroundImageCache", false, true);
-	</script>
-	<link rel="stylesheet" type="text/css" href="CSS/reset.css">
-	<link rel="stylesheet" type="text/css" href="CSS/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="CSS/index.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable = no" />
+	<title>index</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.css" />
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+	<style type="text/css">
+	body { padding-top: 70px;background:url(../master/blogDemo/imgs/bg.png) repeat; }
+/* 	.section:nth-child(1){background: green}
+.section:nth-child(2){background: red}
+.section:nth-child(3){background: gray}
+.section:nth-child(4){background: blue}
+.section:nth-child(5){background: yellow} */
+	</style>
+
 </head>
 <body>
-<div id="main-warpper">
-    <!-- 头部 -->
-	<header>
-		<nav>
-			<div class="logo"><a href="#">徐梓焱</a></div>
-			<ul>	
-				<li><a href="">首页</a></li>
-				<li><a href="">随笔</a></li>
-				<li><a href="">积累</a></li>
-				<li><a href="javascript:;" id="side-click">侧栏</a></li>
-			</ul>
-		</nav>
-		<div id="banner">
-			<div class="inner">
-				<div class="photo"></div>
-				<div class="hr"></div>
-				<div class="info">
-					<p>我叫徐梓焱</p>
-					<p>毕业一年的我</p>
-					<p>摆脱了安逸的工作</p>
-					<p>想自学成为一名前端er</p>
-				</div>
-				
-				<button>了解我</button>
-				<div class="more">
-					更多
-				</div>
-			</div>
-		</div>
-	</header>	
-	<!-- 内容 -->
-	<div id="content">
-		<section id="1F" class="part1">
-			<div class="p1_warpper">
-				<div class="p1_text">
-					<h2>目标</h2>
-					<div class="hr"></div>
-					<p>万丈高楼平地起<br><br>一切成功都在于一点一点的努力 <br><br>我的首要目标是巩固前端的基础技能</p>
-				</div>
-				<div class="p1_item">
-					<span class="icon1"></span>
-					<span class="icon2"></span>
-					<span class="icon3"></span>
-					<div id="html">
-						<ul>
-							<li>理解WEB标准</li>
-							<li>熟练，语义化的运用HTML标签</li>
-							<li>熟悉HTML5的新标准</li>
-						</ul>
-					</div>
-					<div id="CSS">
-						<ul>
-							<li>能熟悉使用CSS/CSS3的属性</li>
-							<li>了解浏览器兼容性，了解一些CSS hack</li>
-							<li>了解bootstrap框架以及css预编译器less</li>
-						</ul>
-					</div>
-					<div id="JS">
-						<ul>
-							<li>掌握JQuery</li>
-							<li>熟悉JavaScript原生编程</li>
-							<li>正在学习ES6新标准</li>
-						</ul>
-					</div>
-				</div>
-				<div class="hr2"></div>
-				<div class="nextp">
-				</div>
-			</div>
-		</section>
-		<section  id="2F" class="part2">
-			<div class="p_warpper">
 
-				<div class="p_img"><img src="IMGS/pic01.jpg" alt="">
-				</div>
-				<div class="p_text">
-					<h2>学生生涯</h2>
-					<p>毕业于广东海洋大学通信工程专业<br>学生期间充分发掘自己的兴趣爱好：大一在爱心社网络部学习PS，制作若干海报，现在我能熟练掌握PS切图，学习通信相关专业课程，让我对互联网有更开阔的见解；熟悉通信协议等等</p>
-				</div>
-			</div>
-			<div class="p_warpper">
-				
-				<div class="p_text">
-					<h2>第一份工作</h2>
-					<p>刚刚毕业的懵懂，让我匆匆的选择了人生的第一份工作：纬创资通的测试工程师，入职一年来渐渐觉得工作过于安逸，所以萌生换工作的想法，工作上需要用C#进行自动化测试，接触到ASP.NET，了解到前端这一职业，让我充满兴趣，工作满一年后，辞职自学前端，希望能进入前端行业</p>
-				</div>
-				<div class="p_img"><img src="imgs/pic02.jpg" alt="">
-				</div>
-			</div>
-			<div class="p_warpper">
-				<div class="p_img"><img src="imgs/pic03.jpg" alt="">
-				</div>
-				<div class="p_text">
-					<h2>如今</h2>
-					<p>急切需要一份工作来检查我这些日子来的学习成果，努力！</p>
-				</div>
-			</div>
-		</section>
-		<section id="3F" class="part3">
-			<div class="p3_warpper">
-				<div class="p_text">
-					<h2>一些小Demo</h2>
-					<div class="hr"></div>
-					<p>都是自学的日子里写的一些demo</p>
-				</div>
-				<div class="p_box">
-					<div class="box">
-						<h3>原生JS博客</h3>
-						<p>跟着视频教程一步一步写的，算是一个小项目，对原生JS有了一个更深刻的理解</p>
-						<a href=""><img src="imgs/demo1.png"></a>
-					</div>	
-					<div class="box">
-						<h3>企业网站</h3>
-						<p>了解企业网站制作的布局以及相关注意事项</p>
-						<a href=""><img src="imgs/demo2.png"></a>
-					</div>
-					<div class="box">
-						<h3>电商网站</h3>
-						<p>由PSD设计图切图到DIV布局与CSS样式实现设计图效果</p>
-						<a href=""><img src="imgs/demo3.png"></a>
-					</div>
-					<div class="box">
-						<h3>更多</h3>
-						<p>建设中...</p>
-					</div>
-				</div>
-
-			</div>
-		</section>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Jean</a>
+	    </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>       
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">第一页</a></li> 
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">第二页</a></li> 
+	      </ul>
+	       <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">第三页</a></li> 
+	      </ul>
+	       <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">第四页</a></li> 
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div id="fullpage">
+	    <div class="section">
+	    </div>
+	    <div class="section">Some section</div>
+	    <div class="section">Some section</div>
+	    <div class="section">Some section</div>
+	    <div class="section">Some section</div>
 	</div>
-	<div class="stotop">
-		<a href="javascript:;" id="btn" title="回到顶部"></a>
-	</div>
-	
-	<!-- 尾部 -->
-	<footer id="footer">
-		<div class="connect"><a href="">联系我</a></div>
-		<ul class="share">
-			<li><a href="#">微信</a></li>
-			<li><a href="#">QQ</a></li>
-			<li><a href="#">微博</a></li>
-			<li><a href="#">邮件</a></li>
-		</ul>
-		<div class="copy">&copy 徐梓焱 - 2016</div>
-	</footer>
-</div>
- 	<div id="mask"></div>
- 	<div id="side">
- 		<ul>
- 			<li><a href="#1F">我的技能</a></li>
- 			<li><a href="#2F">我的历程 </a></li>
- 			<li><a href="#3F">我的demo</a></li>
- 			<li><a href="#footer">联系我</a></li>
- 		</ul>
- 	</div>
 
 
- 	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+<!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+<!-- <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/move.js/0.5.0/move.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('#fullpage').fullpage();
+});
+</script>
 </body>
-<script src="JS/jquery.js"></script>
-<script src='JS/move.min.js'></script>
-<script src="JS/index.js"></script>
-<script src="JS/goToTop.js"></script>
 
 </html>
