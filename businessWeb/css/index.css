@@ -1,0 +1,311 @@
+body {
+	background-color: #F5F5F5;
+	font-size: 12px;
+}
+
+ul,h2,p{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 100%;
+	height: 27px;
+	background: url(../imgs/top_bg.jpg) repeat-x;
+}
+.top{
+	width: 1000px;
+	font-size: 12px;
+	margin: 0 auto;
+}
+.top li{
+	line-height: 27px;
+	float: right;
+	list-style-image:url(../imgs/li_bg.gif); 
+	width: 70px;
+}
+
+.top li a{
+	text-decoration: none;
+}
+
+.top li a:link,.top li a:visited{
+	color: rgb(142, 142, 142);
+
+}
+
+.top li a:hover,.top li a:active{
+	color: rgb(204, 0, 0);
+	
+} 
+
+.logo{
+	width: 1000px;
+	height: 80px;
+	margin: 0 auto;
+	font-size: 12px;
+	background-color: #FFF;
+}
+.logo span{
+	color: #C00;
+	font-size: 22px;
+}
+
+.logo_left{
+	float: left;
+}
+
+.logo_right{
+	padding-left:38px; 
+	padding-right:10px; 
+	background: url(../imgs/tel.jpg) no-repeat left center;
+	line-height: 80px;
+	float: right;
+}
+
+.nav{
+	width: 1000px;
+	height: 40px;
+	margin: 0 auto;
+	background:#544d4d;
+	border-radius:8px; 
+}
+
+.nav_left{
+	width: 690px;
+	margin-left: 10px;
+	float: left;
+	line-height: 40px;
+	display: inline;
+}
+
+.nav_left li{
+	float: left;
+	list-style: none;
+	line-height: 40px;
+	text-align: center;
+	padding-left:40px; 
+}
+
+.nav_left li a:link,.nav_left li a:visited{
+	font-size: 16px;
+	font-weight: bold;
+	color:#FFF;
+	text-decoration: none;
+}
+
+.nav_left li a:hover,.nav_left li a:active{
+	font-size: 16px;
+	font-weight: bold;
+	color:#FF0;
+	text-decoration: none;
+}
+
+.nav_right{
+	width: 300px;
+	float: right;
+	line-height: 40px;
+	display: inline;
+}
+
+.nv_search{
+	height: 20px;
+	margin-top: 5px;
+	background:#FFF url(../imgs/search.jpg) no-repeat right center;
+	padding-right:25px;  
+	
+}
+.ad{
+	width: 1000px;
+	margin:5px auto;
+	overflow: hidden;
+}
+
+.content{
+	width: 1000px;
+	height: 250px;
+	margin: 5px auto;
+	background: #FFF;
+}
+
+
+
+.con_left{
+	width: 340px;
+	height: 250px;
+	border: 1px solid #000;
+	float:left;
+/* 	background: red; */
+}
+
+.con_mid{
+	width: 410px;
+	height: 250px;
+	border: 1px solid #000;
+	float:left;
+	/* background: green; */
+}
+
+.con_right{
+	width: 230px;
+	height: 250px;
+	border: 1px solid #000;
+	float:left;
+	/* background: blue; */
+}
+
+.con_mid, .con_right{
+	margin-left: 7px;
+}
+
+.con_title{
+	height: 35px;
+	border: 2px solid #E8E8E8;
+	line-height: 35px;
+}
+
+.title_left{
+	width: 70%;
+	font-size: 14px;
+	line-height: 35px;
+	margin:0; 
+	padding-left: 10px;
+	float: left;
+}
+
+.title_right{
+	width: 20%;
+	float: right;
+	text-align: right;
+	line-height: 35px;
+	padding-right: 10px;
+}
+.title_right a:link,.title_right a:visited{
+	color: #000;
+	text-decoration: none;
+}
+
+.title_right a:hover,.title_right a:active{
+	color: #FF0;
+	text-decoration: none;
+}
+
+.con_head{
+	height: 88px;
+}
+
+.con_head img{
+	float: left;
+	margin:0 5px;
+}
+
+.con_head a{
+	font-size: 14px;
+	line-height: 27px;
+	text-align: center;
+	color: red;
+	text-decoration: none;
+}
+
+.con_head p{
+	font-size: 14px;
+}
+
+.con_list{
+	margin-top: 30px;
+	height: 120px;
+}
+
+.con_list li{
+	list-style: none;
+	line-height: 17px;
+	background:url(../imgs/list.jpg) no-repeat;
+	margin: 5px;
+	padding-left: 10px;
+	border-bottom: 1px dotted #CCC;
+}
+
+.con_list span{
+	float: right;
+}
+
+.con_list a:link,.con_list a:visited{
+	text-decoration: none;
+	color: #000;
+}
+
+.con_list a:hover,.con_list a:active{
+	text-decoration: none;
+	color: #F00;
+}
+
+.con_list2{
+	width:373px;
+	height: 37px;
+	margin:60px auto;
+	background: url(../imgs/product_type_bg.jpg);
+}
+
+.con_list2 li{
+	list-style: none;
+	float: left;
+	margin:0 15px;
+	line-height: 37px;
+}
+
+.con_list2 a:link,.con_list2 a:visited{
+	text-decoration: none;
+	color: #000;
+}
+.con_list2 a:hover,.con_list2 a:active{
+	text-decoration: none;
+	color: #F00;
+}
+
+.con_video{
+	margin-bottom:10px;
+	border:1px solid #E8E8E8;
+}
+
+.con_ad{
+	height: 55px;
+	border:1px solid #E8E8E8;
+}
+footer{
+	width: 100%;
+	height: 200px;
+	background: #E8E8E8;
+}
+
+.footer{
+	width: 1000px;
+	margin:10px auto;
+	padding-top: 20px;
+}
+
+.footer li{
+	width: 200px;
+	float: left;
+	text-align: center;
+	list-style: none;
+	line-height: 30px;
+	font-size: 18px;
+	font-weight:bold; 
+	background: url(../imgs/line.png) no-repeat right center;
+}
+
+.footer li ul li a:link,.footer li ul li a:visited{
+	font-size: 14px;
+	color: #999;
+	text-decoration: none;
+}
+
+.footer li ul li a:hover,.footer li ul li a:active{
+	font-size: 14px;
+	color: #F00;
+	text-decoration: none;
+}
+
+.new_ad{
+	width: 1000px;
+	margin:0 auto;
+}
