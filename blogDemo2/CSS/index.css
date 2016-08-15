@@ -1,5 +1,5 @@
 #main-warpper{
-	background: url(../imgs/banner.jpg);
+	background: url(../IMGS/banner.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -69,7 +69,7 @@ nav .logo a{
 #banner .inner .photo{
 	width: 120px;
 	height: 120px;
-	background: url(../imgs/photo.jpg);
+	background: url(../IMGS/photo.jpg);
 	background-repeat: no-repeat; 
 	/* background-position: -60px -80px; */
 	-moz-background-size:120px 120px; /* 老版本的 Firefox */
@@ -144,15 +144,15 @@ button{
 }
 
 #content .part1 .p1_warpper .icon1{
-	background:url(../imgs/html.png) no-repeat;
+	background:url(../IMGS/html.png) no-repeat;
 	background-position: -4px 0px;
 }
 #content .part1 .p1_warpper .icon2{
-	background:url(../imgs/css.png)  no-repeat;
+	background:url(../IMGS/css.png)  no-repeat;
 	background-position: -4px 0px;
 }
 #content .part1 .p1_warpper .icon3{
-	background:url(../imgs/js.png)  no-repeat;
+	background:url(../IMGS/js.png)  no-repeat;
 	background-position: -4px 0px;
 }
 
@@ -380,12 +380,12 @@ footer .connect a{
 	position: fixed;
 	right: 10px;
 	bottom: 10px;
-	background: url(../imgs/top_bg.png) no-repeat;
+	background: url(../IMGS/top_bg.png) no-repeat;
 	display: none;
 }
 
 #btn:hover{
-	background: url(../imgs/top_bg.png) no-repeat left -40px;
+	background: url(../IMGS/top_bg.png) no-repeat left -40px;
 }
 
 #side{
