@@ -10,13 +10,91 @@
 
 
 	<style type="text/css">
-	body { padding-top: 70px;background:url(blogDemo/imgs/bg.png) repeat; }
+	body { padding-top: 70px;background:url(blogDemo/imgs/bg.png) repeat;}
+	.section{padding-top: 70px;overflow: hidden;}
+	#home{display: none;}
+
+	.photo{
+		position: relative;
+		top: -200px;
+		width: 120px;
+		height: 120px;
+		background: url(blogDemo2/IMGS/photo.jpg);
+		background-repeat: no-repeat; 
+		/* background-position: -60px -80px; */
+		-moz-background-size:120px 120px; /* 老版本的 Firefox */
+		background-size:120px 120px;
+	    -moz-border-radius: 60px;
+	    -webkit-border-radius: 60px;
+	    box-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+		border-radius:60px;
+		margin:20px auto;
+    } 
+  .hr{
+	height: 2px;
+	background: #CCC;
+	width: 0px;
+	margin: 30px auto;
+}
+    .inner{
+    	max-width: 60%;
+    	text-align: center;
+    	margin: 0 auto;
+
+    }
+    .inner p{display: none;}
+.about-item span{font-size: 35px;width: 80px;height: 80px;border-radius:40px;border:1px solid red;padding-top: 20px;margin-bottom: 20px}
+.about-item span:hover{font-size: 45px;width: 80px;height: 80px;border-radius:40px;border:1px solid red;padding-top: 20px}
+.about-item p{font-size: 12px;}
+.about-item{width: 25%;height: 150px;padding-top: 20px;}
+.about-swap{width: 60%; height:150px;margin: 20px auto;}
+.fl{float: left;}
+.corner-left{position:fixed;left:20%;width: 60px;height: 60px;border-top: 2px solid #5686D6;border-left:2px solid #5686D6;}
+.corner-right{position:fixed;right:20%;width: 60px;height: 60px;border-bottom: 2px solid #5686D6;border-right:2px solid #5686D6;}
+.about-info{text-align: center;padding-top:40px;}
+#html{max-width: 80%; height:80%;margin:0 auto;background: #e6e6e6}
 /* 	.section:nth-child(1){background: green}/
 .section:nth-child(2){background: red}
 .section:nth-child(3){background: gray}
 .section:nth-child(4){background: blue}
 .section:nth-child(5){background: yellow} */
+#footer{
+	position: absolute;
+	bottom: 0;
+	background:#f8f8f8;
+	color: #000;
+	width:100%;
+	height: 100px;
+	text-align: center;
+}
+
+
+#footer .share{
+	width: 200px;
+	height: 60px;
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+}
+
+
+
+#footer .share li a{
+	float: left;
+	margin: 10px 10px;
+	color: #000;
+	line-height: 20px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+#footer .copy{
+	width: 200px;
+	margin: 0 auto;
+}
+.table{width: 80%;margin: 0 auto;}
 	</style>
+}
 
 </head>
 <body>
@@ -36,30 +114,116 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>       
+	        <li class="active"><a href="#page1">首页 <span class="sr-only">(current)</span></a></li>       
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">第一页</a></li> 
+	        <li><a href="#page5">第四页</a></li> 
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">第二页</a></li> 
+	        <li><a href="#page4">第三页</a></li> 
 	      </ul>
 	       <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">第三页</a></li> 
+	        <li><a href="#page3">第二页</a></li> 
 	      </ul>
 	       <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">第四页</a></li> 
+	        <li><a href="#page2">第一页</a></li> 
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 	<div id="fullpage">
+		<!-- 第一页 -->
 	    <div class="section">
+	    	<div class="inner home_zoom" id="home">
+				<div class="photo"></div>
+				    <p id="info">你总是这样轻言放弃的话，无论多久都只会原地踏步</p>
+					<p>我叫徐梓焱</p>
+					<p>毕业一年的我</p>
+					<p>辞去了安逸的工作</p>
+					<p>想自学成为一名前端工程师</p>
+				
+				
+				
+			</div>
 	    </div>
-	    <div class="section">Some section</div>
-	    <div class="section">Some section</div>
-	    <div class="section">Some section</div>
-	    <div class="section">Some section</div>
+	    <div class="section">
+	    	<h3 class="text-center">关于我</h3>
+	    	<div class="about-swap text-center ">
+
+	    		<div class="about-item fl">
+	    		<span class="glyphicon glyphicon-education"></span>
+					<p>学历：本科</p>
+		    	</div>
+		    	<div class="about-item fl">
+		    		<span class="glyphicon glyphicon-user"></span>
+		    		<p>年龄：25</p>
+		    	</div>
+		    	<div class="about-item fl">
+		    		<span class="glyphicon glyphicon-map-marker"></span>
+		    		<p>坐标：广州</p>
+		    	</div>
+		    	<div class="about-item fl">
+		    		<span class="glyphicon glyphicon-pencil"></span>
+		    		<p>状态：离职</p>
+		    	</div>
+		    	</div>
+		    <div class="corner-left"></div>
+		    <div class="about-info">
+		    	<p>2015年毕业于广东海洋大学</p>
+		    	<p>干了一年测试</p>
+		    	<p>自学半年Web前端</p>
+		    	<p>期待有个机会能入行前端</p>
+		    </div>
+		    <div class="corner-right"></div>
+	    	
+	    </div>
+	    <div class="section">
+		
+	    <h1 class="text-center">我的技能</h1>
+	    	    <div class="slide">
+	    	    	<div id="html">
+	    	    		
+	    	    	</div>
+	    	    </div>
+		        <div class="slide">第三屏的第二屏</div>
+		        <div class="slide">第三屏的第三屏</div>
+		        <div class="slide">第三屏的第四屏</div>
+	    </div>
+	    <div class="section">
+	    	 <h1 class="text-center">我的Demo</h1>
+	  		 <table class="table table-hover">
+				<tr>
+					<th>demo名称</th>
+					<th>心得体会</th>
+				</tr>
+				<tr>
+					<td><a href="http://www.baidu.com">原生JS博客</a></td>
+					<td><ul><li>ssdddddd第三代第三第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠代颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠三倒四颠三倒四s</li><li>s第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠ss</li><li>sss</li><li>s第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠ss</li><li>sss</li></ul></td>
+				</tr>
+				<tr>
+					<td>原生JS博客</td>
+					<td>应用原生JS</td>
+				</tr>
+				<tr>
+					<td>原生JS博客</td>
+					<td>应用原生JS</td>
+				</tr>
+			 </table>
+	     </div>
+	    <div class="section">
+		<h1 class="text-center">联系我</h1>
+		<!-- 尾部 -->
+		<div id="footer">
+		
+		<ul class="share">
+			<li><a href="#">微信</a></li>
+			<li><a href="#">QQ</a></li>
+			<li><a href="#">微博</a></li>
+			<li><a href="#">邮件</a></li>
+		</ul>
+		<div class="copy">&copy 徐梓焱 - 2016</div>
+	</div>
+	    </div>
 	</div>
 
 
@@ -79,7 +243,47 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-    $('#fullpage').fullpage();
+    $('#fullpage').fullpage({
+    	scrollingSpeed: 400,
+		css3: true,
+		anchors: ["page1","page2","page3","page4","page5"],
+		verticalCentered: false,
+		afterRender: function(){
+			
+			$("#home").css({"display":"block"}).addClass("home_zoom");
+			$(".photo").animate({top:0},500);//头像移入
+			$("#info").after("<div class='hr'></hr>")
+				.fadeIn(800,function(){
+				$(this).next().animate({width:"430px"},1500,function(){
+					$(this).next().fadeIn(400,function(){
+						$(this).next().fadeIn(400,function(){
+							$(this).next().fadeIn(400,function(){
+								$(this).next().fadeIn(400)
+							});
+						})
+					});
+				});
+			});
+	    	
+	    	
+			}
+
+    });
+    
+  /*
+    function showP(){
+    	$(".photo").animate({top:0},1500);//头像移入
+    	$(".hr").animate({width:"430px"},1500);
+    	
+    	for(var i =0 ; i< $home_p.length;i++){
+    		
+    	 $home_p.eq(i).delay(1000).fadeIn(400);//
+
+    	}
+
+    
+    }
+    showP(); */
 });
 </script>
 </body>
