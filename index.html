@@ -1,235 +1,178 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="Keywords" content="blog"/>
-    <meta name="Description" content="blog"/>
-    <title>Simple</title>
-    <link rel="shortcut icon" href="/static/favicon.png"/>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+	<meta charset="UTF-8">
+	<title>徐梓焱博客demo</title>
+	<script>
+	document.execCommand("BackgroundImageCache", false, true);
+	</script>
+	<link rel="stylesheet" type="text/css" href="CSS/reset.css">
+	<link rel="stylesheet" type="text/css" href="CSS/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/index.css">
 </head>
 <body>
-<div class="main">
-    <div class="header">
-        <ul id="pages">
-            <li>
-                <a href="/">home</a>
-            </li>
-            <li>
-                <a href="/#/tags">tags</a>
-            </li>
-            <li>
-                <a href="/#/archive">archive</a>
-            </li>
-            <li>
-                <a href="bologDemo">bologdemo</a>
-            </li>
-        </ul>
-    </div>
-    <div class="wrap-header">
-        <h1>
-        <a href="/" id="title"></a>
-        </h1>
-    </div>
-    <div class="innermain" id="main">
-    </div>
-    <div class="footer">
-        <p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
-    </div>
+<div id="main-warpper">
+    <!-- 头部 -->
+	<header>
+		<nav>
+			<div class="logo"><a href="#">徐梓焱</a></div>
+			<ul>	
+				<li><a href="">首页</a></li>
+				<li><a href="">随笔</a></li>
+				<li><a href="">积累</a></li>
+				<li><a href="javascript:;" id="side-click">侧栏</a></li>
+			</ul>
+		</nav>
+		<div id="banner">
+			<div class="inner">
+				<div class="photo"></div>
+				<div class="hr"></div>
+				<div class="info">
+					<p>我叫徐梓焱</p>
+					<p>毕业一年的我</p>
+					<p>摆脱了安逸的工作</p>
+					<p>想自学成为一名前端er</p>
+				</div>
+				
+				<button>了解我</button>
+				<div class="more">
+					更多
+				</div>
+			</div>
+		</div>
+	</header>	
+	<!-- 内容 -->
+	<div id="content">
+		<section id="1F" class="part1">
+			<div class="p1_warpper">
+				<div class="p1_text">
+					<h2>目标</h2>
+					<div class="hr"></div>
+					<p>万丈高楼平地起<br><br>一切成功都在于一点一点的努力 <br><br>我的首要目标是巩固前端的基础技能</p>
+				</div>
+				<div class="p1_item">
+					<span class="icon1"></span>
+					<span class="icon2"></span>
+					<span class="icon3"></span>
+					<div id="html">
+						<ul>
+							<li>理解WEB标准</li>
+							<li>熟练，语义化的运用HTML标签</li>
+							<li>熟悉HTML5的新标准</li>
+						</ul>
+					</div>
+					<div id="CSS">
+						<ul>
+							<li>能熟悉使用CSS/CSS3的属性</li>
+							<li>了解浏览器兼容性，了解一些CSS hack</li>
+							<li>了解bootstrap框架以及css预编译器less</li>
+						</ul>
+					</div>
+					<div id="JS">
+						<ul>
+							<li>掌握JQuery</li>
+							<li>熟悉JavaScript原生编程</li>
+							<li>正在学习ES6新标准</li>
+						</ul>
+					</div>
+				</div>
+				<div class="hr2"></div>
+				<div class="nextp">
+				</div>
+			</div>
+		</section>
+		<section  id="2F" class="part2">
+			<div class="p_warpper">
+
+				<div class="p_img"><img src="imgs/pic01.jpg" alt="">
+				</div>
+				<div class="p_text">
+					<h2>学生生涯</h2>
+					<p>毕业于广东海洋大学通信工程专业<br>学生期间充分发掘自己的兴趣爱好：大一在爱心社网络部学习PS，制作若干海报，现在我能熟练掌握PS切图，学习通信相关专业课程，让我对互联网有更开阔的见解；熟悉通信协议等等</p>
+				</div>
+			</div>
+			<div class="p_warpper">
+				
+				<div class="p_text">
+					<h2>第一份工作</h2>
+					<p>刚刚毕业的懵懂，让我匆匆的选择了人生的第一份工作：纬创资通的测试工程师，入职一年来渐渐觉得工作过于安逸，所以萌生换工作的想法，工作上需要用C#进行自动化测试，接触到ASP.NET，了解到前端这一职业，让我充满兴趣，工作满一年后，辞职自学前端，希望能进入前端行业</p>
+				</div>
+				<div class="p_img"><img src="imgs/pic02.jpg" alt="">
+				</div>
+			</div>
+			<div class="p_warpper">
+				<div class="p_img"><img src="imgs/pic03.jpg" alt="">
+				</div>
+				<div class="p_text">
+					<h2>如今</h2>
+					<p>急切需要一份工作来检查我这些日子来的学习成果，努力！</p>
+				</div>
+			</div>
+		</section>
+		<section id="3F" class="part3">
+			<div class="p3_warpper">
+				<div class="p_text">
+					<h2>一些小Demo</h2>
+					<div class="hr"></div>
+					<p>都是自学的日子里写的一些demo</p>
+				</div>
+				<div class="p_box">
+					<div class="box">
+						<h3>原生JS博客</h3>
+						<p>跟着视频教程一步一步写的，算是一个小项目，对原生JS有了一个更深刻的理解</p>
+						<a href=""><img src="imgs/demo1.png"></a>
+					</div>	
+					<div class="box">
+						<h3>企业网站</h3>
+						<p>了解企业网站制作的布局以及相关注意事项</p>
+						<a href=""><img src="imgs/demo2.png"></a>
+					</div>
+					<div class="box">
+						<h3>电商网站</h3>
+						<p>由PSD设计图切图到DIV布局与CSS样式实现设计图效果</p>
+						<a href=""><img src="imgs/demo3.png"></a>
+					</div>
+					<div class="box">
+						<h3>更多</h3>
+						<p>建设中...</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</div>
+	<div class="stotop">
+		<a href="javascript:;" id="btn" title="回到顶部"></a>
+	</div>
+	
+	<!-- 尾部 -->
+	<footer id="footer">
+		<div class="connect"><a href="">联系我</a></div>
+		<ul class="share">
+			<li><a href="#">微信</a></li>
+			<li><a href="#">QQ</a></li>
+			<li><a href="#">微博</a></li>
+			<li><a href="#">邮件</a></li>
+		</ul>
+		<div class="copy">&copy 徐梓焱 - 2016</div>
+	</footer>
 </div>
-<script src="main.js"></script>
-<script id="itemTemplate" type="text/mustache">
-    {{#posts}}
-    <div class="item">
-        <div class="date">
-            <div class="little">
-            </div>
-            {{date}}
-        </div>
-        <div class="title">
-            <h2>
-                <a href="{{path}}">{{title}}</a>
-            </h2>
-        </div>
-    </div>
-    {{/posts}}
-    <ul class="pages">
-        Pages:
-        {{#pages}}
-            <li>
-            {{#select}}
-                <span class="selected">{{num}}</span>
-            {{/select}}
-            {{^select}}
-                <a href="{{path}}">{{num}}</a>
-            {{/select}}
-            </li>
-        {{/pages}}
-    </ul>
-</script>
-<script id="archiveTemplate" type="text/mustache">
-    {{#group}}
-    {{name}}
-    {{#posts}}
-    <div class="archive">
-    <span>{{date}}</span>
-    <a href="{{path}}">{{title}}</a>
-    </div>
-    {{/posts}}
-    {{/group}}
-</script>
-<script id="pagesTemplate" type="text/mustache">
-    {{#pages}}
-    <li>
-        <a href="{{path}}">{{title}}</a>
-    </li>
-    {{/pages}}
-</script>
-<script id="tagsTemplate" type="text/mustache">
-    <ul style="list-style: none">
-        {{#tags}}
-        <li style="display:inline; margin: 15px;">
-            <a href="{{path}}" style="font-size: {{size}}%">{{name}}</a>
-        </li>
-        {{/tags}}
-    </ul>
-</script>
-<script>
-$(document).ready(function() {
-    $.ajax({
-        url: "main.json",
-        type: "GET",
-        dataType: "json",
-        success: function(data) {
-            $("#title").html(data.name);
-            data.posts.sort(function(a, b){
-                if (a.date > b.date)
-                    return -1;
-                if (a.date < b.date)
-                    return 1;
-                return 0;
-            });
-            console.log(data.posts);
-            var per = data.number_of_posts_per_page;
-            var n = data.posts.length;
-            var num = Math.floor((n-1)/per)+1;
-            var arr = [];
-            var tmp = [];
-            for (var i = 0; i < n; ++i) {
-                if (i != 0 && i % per == 0) {
-                    arr.push(tmp)
-                    tmp = [];
-                }
-                tmp.push(data.posts[i]);
-            }
-            if (tmp.length > 0)
-                arr.push(tmp);
-            var pages = [{"select": true, "num": 1, "path": "#/page/1"}];
-            for (var i = 1; i < num; ++i)
-                pages.push({"select": false, "num": i+1, "path": "#/page/"+(i+1)});
-            var itemTemplate = Hogan.compile($("#itemTemplate").html());
-            var itemHtml = itemTemplate.render({"posts": arr[0], "pages": pages});
-            $("#main").html(itemHtml);
-            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
-            var pagesHtml = pagesTemplate.render({"pages": data.pages});
-            $("#pages").append(pagesHtml);
-            var App = Spine.Controller.sub({
-                el: $("#main"),
-                init: function() {
-                    this.routes({
-                        "/page/:page": function(page) {this.go(page);},
-                        "/tags": function() {this.tags();},
-                        "/tag/:tag": function(param) {this.tag(param);},
-                        "/archive": function() {this.archive();}
-                    });
-                    Spine.Route.setup();
-                },
-                go: function(page) {
-                    page = Math.floor(page.page);
-                    for (var i = 0; i < pages.length; ++i)
-                        pages[i].select = false;
-                    pages[page-1].select = true;
-                    var tmppages = pages;
-                    if (page > 2 && pages.length > 4)
-                        tmppages = pages.slice(page-3);
-                    if (tmppages.length > 5)
-                        tmppages = tmppages.slice(0, 5);
-                    if (pages.length > 4 && tmppages.length < 5)
-                        tmppages = pages.slice(-5);
-                    itemHtml = itemTemplate.render({"posts": arr[page-1], "pages": tmppages});
-                    $("#main").html(itemHtml);
-                },
-                tags: function() {
-                    var ts = {};
-                    var posts = data.posts;
-                    var tf = function() {
-                        for (var i = 0; i < posts.length; ++i) {
-                            var tmp = posts[i].tags.split(" ");
-                            for (var j = 0; j < tmp.length; ++j) {
-                                if (tmp[j].length == 0)
-                                    continue;
-                                if (!(tmp[j] in ts))
-                                    ts[tmp[j]] = 0;
-                                ts[tmp[j]]++;
-                            }
-                        }
-                    }
-                    tf();
-                    posts = data.pages;
-                    tf();
-                    var ans = [];
-                    for (var k in ts) {
-                        ans.push({"name": "#"+k, "size": 100+Math.sqrt(ts[k]-1)*30, "path": "#/tag/"+k});
-                    }
-                    var tagsTemplate = Hogan.compile($("#tagsTemplate").html());
-                    var tagsHtml = tagsTemplate.render({"tags": ans});
-                    $("#main").html(tagsHtml);
-                },
-                tag: function(param) {
-                    var tag = param.tag;
-                    var group = [{"name": "#"+tag}];
-                    var posts = [];
-                    for (var i = 0; i < data.posts.length; ++i) {
-                        var tmp = data.posts[i].tags.split(" ");
-                        if (tmp.indexOf(tag) != -1)
-                            posts.push(data.posts[i]);
-                    }
-                    for (var i = 0; i < data.pages.length; ++i) {
-                        var tmp = data.pages[i].tags.split(" ");
-                        if (tmp.indexOf(tag) != -1)
-                            posts.push(data.pages[i]);
-                    }
-                    group[0].posts = posts;
-                    var tmpTemplate = Hogan.compile($("#archiveTemplate").html());
-                    var tmpHtml = tmpTemplate.render({"group": group});
-                    $("#main").html(tmpHtml);
-                },
-                archive: function() {
-                    var group = [];
-                    var posts = data.posts;
-                    var now = -1;
-                    var name = "";
-                    for (var i = 0; i < posts.length; ++i) {
-                        if (name != posts[i].date.slice(0,4)) {
-                            name = posts[i].date.slice(0,4);
-                            group.push({"name": name, "posts": []});
-                            now++;
-                        }
-                        group[now].posts.push(posts[i]);
-                    }
-                    var tmpTemplate = Hogan.compile($("#archiveTemplate").html());
-                    var tmpHtml = tmpTemplate.render({"group": group});
-                    $("#main").html(tmpHtml);
-                }
-            });
-            new App();
-        },
-        error: function(e) {
-            console.log("init error");
-        }
-    });    
-});
-</script>
+ 	<div id="mask"></div>
+ 	<div id="side">
+ 		<ul>
+ 			<li><a href="#1F">我的技能</a></li>
+ 			<li><a href="#2F">我的历程 </a></li>
+ 			<li><a href="#3F">我的demo</a></li>
+ 			<li><a href="#footer">联系我</a></li>
+ 		</ul>
+ 	</div>
+
+
+ 	
 </body>
+<script src="JS/jquery.js"></script>
+<script src='JS/move.min.js'></script>
+<script src="JS/index.js"></script>
+<script src="JS/goToTop.js"></script>
+
 </html>
