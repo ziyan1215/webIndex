@@ -13,7 +13,6 @@
 	body { padding-top: 70px;background:url(blogDemo/imgs/bg.png) repeat;}
 	.section{padding-top: 70px;overflow: hidden;}
 	#home{display: none;}
-
 	.photo{
 		position: relative;
 		top: -200px;
@@ -28,21 +27,13 @@
 	    -webkit-border-radius: 60px;
 	    box-shadow: 0px 0px 1px rgba(0,0,0,0.4);
 		border-radius:60px;
-		margin:20px auto;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 20%;
     } 
-  .hr{
-	height: 2px;
-	background: #CCC;
-	width: 0px;
-	margin: 30px auto;
-}
-    .inner{
-    	max-width: 60%;
-    	text-align: center;
-    	margin: 0 auto;
-
-    }
-    .inner p{display: none;}
+.hr{height: 2px;background: #CCC;width: 0px;margin: 30px auto;}
+.inner{max-width: 60%;text-align: center;margin: 0 auto;}
+.inner p{display: none;}
 .about-item span{font-size: 35px;width: 80px;height: 80px;border-radius:40px;border:1px solid red;padding-top: 20px;margin-bottom: 20px}
 .about-item span:hover{font-size: 45px;width: 80px;height: 80px;border-radius:40px;border:1px solid red;padding-top: 20px}
 .about-item p{font-size: 12px;}
@@ -52,7 +43,14 @@
 .corner-left{position:fixed;left:20%;width: 60px;height: 60px;border-top: 2px solid #5686D6;border-left:2px solid #5686D6;}
 .corner-right{position:fixed;right:20%;width: 60px;height: 60px;border-bottom: 2px solid #5686D6;border-right:2px solid #5686D6;}
 .about-info{text-align: center;padding-top:40px;}
-#html{max-width: 80%; height:80%;margin:0 auto;background: #e6e6e6}
+.about-info p{display: none}
+#html{max-width: 80%;margin:60px auto;}
+.table{width: 80%;margin: 0 auto;}
+.showList{width: 60%;margin: 0 auto;padding-top: 35px;}
+.showList h5{height:30px;width:0;line-height:30px;display:inline-block;vertical-align: center;display: none;}
+.showList ul{display: none;}
+.showList span{position: absolute;}
+.skill-swrap{ }
 /* 	.section:nth-child(1){background: green}/
 .section:nth-child(2){background: red}
 .section:nth-child(3){background: gray}
@@ -92,9 +90,11 @@
 	width: 200px;
 	margin: 0 auto;
 }
-.table{width: 80%;margin: 0 auto;}
+
 	</style>
-}
+
+
+
 
 </head>
 <body>
@@ -114,19 +114,19 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#page1">首页 <span class="sr-only">(current)</span></a></li>       
+	        <li class=""><a href="#page1">首页 <span class="sr-only">(current)</span></a></li>       
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#page5">第四页</a></li> 
+	        <li><a href="#page5">联系我</a></li> 
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#page4">第三页</a></li> 
+	        <li><a href="#page4">我的Demo</a></li> 
 	      </ul>
 	       <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#page3">第二页</a></li> 
+	        <li><a href="#page3">专业技能</a></li> 
 	      </ul>
 	       <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#page2">第一页</a></li> 
+	        <li><a href="#page2">关于我</a></li> 
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -169,7 +169,7 @@
 		    	</div>
 		    <div class="corner-left"></div>
 		    <div class="about-info">
-		    	<p>2015年毕业于广东海洋大学</p>
+		    	<p id="p2-info">2015年毕业于广东海洋大学</p>
 		    	<p>干了一年测试</p>
 		    	<p>自学半年Web前端</p>
 		    	<p>期待有个机会能入行前端</p>
@@ -178,18 +178,46 @@
 	    	
 	    </div>
 	    <div class="section">
-		
-	    <h1 class="text-center">我的技能</h1>
-	    	    <div class="slide">
-	    	    	<div id="html">
-	    	    		
-	    	    	</div>
+		<div class="skill-swrap">
+			    <h1 class="text-center">我的技能</h1>
+	    	    <div id="html">
+	    	    <div class="showList">
+
+	    	    	<h5 id="list1"><span>HTML&CSS</span></h5>
+	    	    	<ul>
+	    	    			<li>熟练HTML/XHTML、CSS，熟悉页面架构和布局，对Web标准和标签语义化有深入理解；</li>
+							<li>能够独立完成对设计页面进行网页代码输出；</li>
+							<li>能适当运用CSS3使页面在现代浏览器上效果更佳；</li>
+							<li>能使用合适的结构编写兼容主流浏览器的页面布局；</li>
+							<li>能熟练使用Chrome开发者工具、FireBug等工具辅助开发。</li>
+
+	    	    	</ul>
 	    	    </div>
-		        <div class="slide">第三屏的第二屏</div>
-		        <div class="slide">第三屏的第三屏</div>
-		        <div class="slide">第三屏的第四屏</div>
+	    	     <div class="showList">
+	    	    	<h5 id="list2"><span>JavaScript</span></h5>
+	    	    	<ul>
+							<li>对JavaScript基础知识的掌握，包括基本语法以及DOM操作；</li>
+							<li>对 JavaScript 面向对象编程的思想有一定的了解。</li>
+					</ul>
+	    	    </div>
+	    	    <div class="showList">
+	    	    	<h5 id="list3"><span>JQuery&Bootstrap</span></h5>
+	    	    	<ul>
+						<li>可以通过使用 jQuery 应用 JavaScript 效果；</li>
+						<li>可以熟练执行类似隐藏、移动以及操作其内容等任务；</li>
+						<li>可以使用相应的jQuery 对象和函数来实现网页的动态效果。</li>
+						<li>理解BootStrap的相关组件，能运用到实际中去。</li>					
+		            </ul>
+	    	    </div>	
+	    	    		
+	    	
+
+	    	    </div>
+		</div>
+	 
 	    </div>
 	    <div class="section">
+
 	    	 <h1 class="text-center">我的Demo</h1>
 	  		 <table class="table table-hover">
 				<tr>
@@ -198,32 +226,63 @@
 				</tr>
 				<tr>
 					<td><a href="http://www.baidu.com">原生JS博客</a></td>
-					<td><ul><li>ssdddddd第三代第三第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠代颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠三倒四颠三倒四s</li><li>s第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠ss</li><li>sss</li><li>s第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠第三代第三代颠三倒四颠ss</li><li>sss</li></ul></td>
+					<td>
+						<ul>
+						<li>通过该Demo去理解JavaScript库，插件的制作，封装的调试，连缀的实现等</li>
+						<li>理解解动画的实现，事件绑定，Dom操作等基础JavaScript知识</li>
+						<li>理解解浏览器检测，Dom延迟加载，预加载的实现</li>
+						<li>了解Ajax的基础应用</li>
+						
+						</ul>
+					</td>
 				</tr>
 				<tr>
-					<td>原生JS博客</td>
-					<td>应用原生JS</td>
+					<td><a href="http://www.baidu.com">企业网站</a></td>
+					<td>
+						<ul>
+						<li>通过该Demo去理解企业网站的特点，常见的布局方式</li>
+						<li>引入焦点图插件，增加主页表现效果</li>					
+						</ul>
+					</td>
 				</tr>
 				<tr>
-					<td>原生JS博客</td>
-					<td>应用原生JS</td>
+					<td><a href="http://www.baidu.com">电商网站</a></td>
+					<td>
+						<ul>
+						<li>这次是由PSD设计图到网站主页的实现</li>
+						<li>通过PSD设计图分析页面结构，构想布局及样式实现</li>
+						<li>熟悉如何使用PS，FW等工具切分PSD设计图</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="http://www.baidu.com">CSS3扁平化博客</a></td>
+					<td>
+						<ul>
+						<li>熟悉HTML5和CSS3的一些新特性</li>
+						<li>实现一些侧栏，回到顶部的简单交互特效</li>
+						<li>由此DEMO构想如何加入响应式布局</li>
+						</ul>
+					</td>
 				</tr>
 			 </table>
 	     </div>
 	    <div class="section">
 		<h1 class="text-center">联系我</h1>
-		<!-- 尾部 -->
+		<p class="text-center"><a  href="Mailto:a0104686@163.com">a0104686@163.com</a></p>
+		<h3 class="text-center">梦想还是要有的，万一实现了呢</h3>
+		<!-- 尾部
 		<div id="footer">
 		
-		<ul class="share">
-			<li><a href="#">微信</a></li>
-			<li><a href="#">QQ</a></li>
-			<li><a href="#">微博</a></li>
-			<li><a href="#">邮件</a></li>
-		</ul>
-		<div class="copy">&copy 徐梓焱 - 2016</div>
-	</div>
-	    </div>
+			<ul class="share">
+				<li><a href="#">微信</a></li>
+				<li><a href="#">QQ</a></li>
+				<li><a href="#">微博</a></li>
+				<li><a href="#">邮件</a></li>
+			</ul>
+			<div class="copy">&copy 徐梓焱 - 2016</div>
+		</div>
+			    </div> -->
 	</div>
 
 
@@ -235,11 +294,13 @@
 
 <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
 <!-- <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.3/vendors/scrolloverflow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/move.js/0.5.0/move.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -247,9 +308,12 @@
     	scrollingSpeed: 400,
 		css3: true,
 		anchors: ["page1","page2","page3","page4","page5"],
+		scrollOverflow:true,
 		verticalCentered: false,
-		afterRender: function(){
-			
+		navigation:true,
+		navigationTooltips:["page1","page2","page3","page4","page5"],
+		//resize:true,
+		afterRender: function(){	
 			$("#home").css({"display":"block"}).addClass("home_zoom");
 			$(".photo").animate({top:0},500);//头像移入
 			$("#info").after("<div class='hr'></hr>")
@@ -264,12 +328,54 @@
 					});
 				});
 			});
-	    	
-	    	
-			}
+			}, 
+		afterLoad:function(anchorLink,index){
+			var loadedSection = $(this);
 
-    });
-    
+            //using index
+            if(index == 2){
+            	// $(".about-info >p").css("display","none");
+                $("#p2-info").delay(1000).fadeIn(400,function(){
+                	 $(this).next().fadeIn(400,function(){
+                	 	 $(this).next().fadeIn(400,function(){
+                	 	 	$(this).next().fadeIn(400);
+                	 	 });
+                	 });
+                });
+            }
+            if(index == 3){
+               //$(".showList >h5").css("display","none");
+               $("#list1").delay(500).fadeIn(400).css("background","#337ab7").animate({"width":"90%"},300,function(){
+               		 $("#list1").next().delay(500).fadeIn();
+               		$("#list2").delay(500).fadeIn(400).css("background","#337ab7").animate({"width":"80%"},300,function(){
+               				$("#list2").next().delay(500).fadeIn();
+               				$("#list3").delay(500).fadeIn(400).css("background","#337ab7").animate({"width":"70%"},300,function(){
+               					$("#list3").next().delay(500).fadeIn();
+               				});
+               		});
+               });
+            }
+            if(index == 4){
+                
+            }
+            if(index == 5){
+                
+            }
+            //using anchorLink
+            /*if(anchorLink == 'secondSlide'){
+                alert("Section 2 ended loading");
+            }*/
+        
+            
+		},	
+
+
+
+    });//fullpage结束
+
+   /* $("#list1").toggle(function(){
+    	
+    });*/
   /*
     function showP(){
     	$(".photo").animate({top:0},1500);//头像移入
