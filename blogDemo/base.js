@@ -1,52 +1,3 @@
-   
-/*//函数式写法
-function $(id){
-	return document.getElementById(id);
-}*/
-
-/*
-
- ///对象式
-var base = {
-	$ : function(id){
-		return document.getElementById(id);
-	},
-	$$ : function(name){
-		return document.getElementsByName(name);
-	},
-	$$$ : function(tagName){
-		return document.getElementsByTagName(tagName);
-	},
-}
-*/
-
-/*//对象式
-var Base = {
-	getId : function(id){
-		return document.getElementById(id);
-	},
-	getName : function(name){
-		return document.getElementsByName(name);
-	},
-	getTagName : function(tagName){
-		return document.getElementsByTagName(tagName);
-	},
-}*/
-/*//前台调用
-var $ = function(_this){
-	return new Base(_this);
-}
-
-//基础库
-function Base(_this){
-	//创建一个数组，用来保存获取的节点和节点数组
-	this.elements = []; //放进基础库里面防止变量公有化。
-	alert(typeof _this); //一开始是undefined 以为没有点击id为box的div，没有触发事件，没传参
-	if(_this!=undefined){//（即有传值过来）_this是一个对象，undefined也是一个对象，区别于typeof返回的  带单引号的对象
-		this.elements[0] = _this;
-	}
-}*/
-
 //前台调用
 var $ = function(args){
 	return new Base(args);
@@ -167,14 +118,6 @@ Base.prototype.find = function(str){
 	this.elements = childElements;
 	return this;//实现连缀
 }
-
-
-
-
-
-
-
-
 	
 //获取ID
 Base.prototype.getId = function(id){
@@ -204,34 +147,6 @@ Base.prototype.getTagName = function(tagName,parentNode){
 	return temps;
 	//return this;
 }
-
-/*//获取TagName
-Base.prototype.getTagName = function(tagName){
-	var tags = document.getElementsByTagName(tagName);
-	for(var i = 0 ;i<tags.length;i++){
-		this.elements.push(tags[i]);
-	}
-	//return this;
-}
-*/
-
-
-/*//获取Class节点数组
-Base.prototype.getClass = function(className,idName){
-	var node = null;
-	if(arguments.length == 2){
-		node = document.getElementById(idName);
-	}else{
-		node = document;
-	}
-	var all = node.getElementsByTagName('*');//获取全部元素
-	for (var i = o;i<all.length;i++){
-		if(all[i].className == className){
-			this.elements.push(all[i]);
-		}
-	}
-	return this;
-}*/
 
 //获取class节点数组，增加一个获取区间的参数
 Base.prototype.getClass=function(className,parentNode){
@@ -267,51 +182,10 @@ Base.prototype.attr= function(attr,value){
 	return this;
 }
 
-
-
-
-/*
-// v1 获取某个节点的属性
-Base.prototype.attr= function(attr){
-	
-		return this.elements[0].getAttribute(attr); 
-	
-}
-*/
-/*
-//获取class节点数组，增加一个获取区间的参数
-Base.prototype.getClass=function(className,idName){
-	var node = null;
-	if(arguments.length==2){
-		node = document.getElementById(idName);
-	}else{
-		node=document;
-	}
-	var all = node.getElementsByTagName("*");
-	for(var i=0;i<all.length;i++){
-		if(all[i].className==className){
-			this.elements.push(all[i]); //直接导入到全局变量中了  
-		}
-	}
-	//return this; //因为前台以及不使用了。改成在构造函数里面使用了  所以可以省
-}*/
-
-/*
-//获取某一个节点 返回这个节点对象
-Base.prototype.getElement = function(num){
-	var element = this.elements[num]; //新建一个变量存储获取的class对象
-	this.elements = []; //清空获取的对象
-	this.elements[0] = element;//给返回值赋值为获取的第几个对象
-	return this;
-
-}*/
-
 //获取某一个节点 返回这个节点对象 获取的是元素对象
 Base.prototype.getElement = function(num){
 	return this.elements[num]; //新建一个变量存储获取的class对象
 }
-
-
 
 //获取首个节点，并返回这个节点对象
 Base.prototype.first = function(){
@@ -339,20 +213,6 @@ Base.prototype.index = function(){
 		if(this.elements[0] == children[i]) return i;
 	}
 }
- 
-
-//
-/*//设置CSS
-Base.prototype.css = function(attr,value){
-	for(var i = 0 ; i<this.elements.length;i++){
-		if(arguments.length == 1){ //只有一个参数的时候  获取该CSS属性值
-			return this.elements[i].style[attr];
-		}
-			this.elements[i].style[attr]=value;
-	
-	}
-	return this;
-}*/
 
 //设置CSS
 Base.prototype.css = function(attr,value){
@@ -374,7 +234,6 @@ Base.prototype.css = function(attr,value){
 	return this;
 }
 
-
 //设置节点元素的透明度
 Base.prototype.opacity = function (num) {
 	for (var i = 0; i < this.elements.length; i ++) {
@@ -384,17 +243,11 @@ Base.prototype.opacity = function (num) {
 		return this;
 };
 
-/*//获取某个节点的属性
-Base.prototype.attr = function (attr) {    ------库中存在两个相同attr  导致出现不明错误。。。。。2016年7月28日18:34:16  花费1天 
-	return this.elements[0][attr];
-}*/
-
-
-
 //获取元素长度
 Base.prototype.length = function(){
 	return this.elements.length;
 }
+
 //添加class
 Base.prototype.addClass = function(className){
 	for(var i=0;i<this.elements.length;i++){
@@ -475,18 +328,6 @@ Base.prototype.bind = function(event,fn){
 	}
 	return this;
 }
-/*//获取class节点数组
-Base.prototype.getClass=function(className){
-	var all = document.getElementsByTagName("*");
-	for(var i=0;i<all.length;i++){
-		if(all[i].className==className){
-			this.elements.push(all[i]);
-		}
-	}
-	return this;
-}*/
-
-
 
 //设置点击切换方法
 Base.prototype.toggle = function () {
@@ -500,23 +341,6 @@ Base.prototype.toggle = function () {
 	}
 	return this;
 };
-
-
-/*//设置点击切换
-Base.prototype.toggle = function(){
-	for(var i =0;i<this.elements.length;i++){
-		var count =0;
-		var args = arguments;
-		addEvent(this.elements[i],'click',function(){
-			//args[count](); //
-			//count++;
-			//if(count >=args.length) count = 0;
-			args[count++%args.length]();
-		});	
-	}
-	return this;
-}*/
-
 
 //设置鼠标移入移出
 Base.prototype.hover=function(over,out){
@@ -794,9 +618,6 @@ Base.prototype.animate =function(obj){
 Base.prototype.extend = function(name,fn){
 	Base.prototype[name] = fn;
 }
-
-
-
 
 /*
 //拖曳功能

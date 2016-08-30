@@ -7,7 +7,7 @@
 
 	/* background: #04e07a url(imgs/banner.jpg); */
 }
-
+img {max-width:100%;}
 a,h1,h2,p{
 	color: #FFF;
 }

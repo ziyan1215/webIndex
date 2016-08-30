@@ -1,0 +1,42 @@
+body,div,dl,dt,dd,ul,li,ol,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
+	padding: 0;
+	margin: 0
+}
+
+ol,ul,li{
+	list-style: none;
+}
+
+/* a{
+	color:#FFF;
+
+	text-decoration: none;
+} */
+/* a:link,a:visited{
+	color:#FFF;
+}
+a:hover,a:active{
+	color:#F00;
+}  */
+img{
+	border-style: none;
+	display: block;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+	visibility:hidden;
+	height: 0;
+}
+
+.fl{
+	float:left;
+}
+
+.fr{
+	float:right;
+}

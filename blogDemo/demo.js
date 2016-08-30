@@ -1,14 +1,4 @@
-/*$(function(){
-	alert(document.body);
-});*/
-
-/*$().ready(function(){
-	alert(document.body);
-});*/
-
-
 $(function(){
-
 	//个人中心
 	$('.member').hover(function(){
 		//$().getId("set").style.display= "block";
@@ -72,6 +62,7 @@ $(function(){
 
 	 });
 
+	  //关闭登录
 	 $('#login .close').click(function(){
 	 	login.css('display','none');
 	 	//screen.css('display','none').unlock();  
@@ -119,25 +110,6 @@ $('#share').hover(function(){
 	});
 });
 
- 
-/*//百度分享初始化位置、
-$('#share').resize(function(){
-	$('#share').css('top',(getInner().height-parseInt(getStyle($('#share').first(),'height')))/2+'px');
-});
-
-$('#share').hover(function(){
-	$(this).animate({
-		'attr':'x',
-		'target':0
-	});
-},function(){
-	$(this).animate({
-		'attr':'x',
-		'target':-230
-	});
-});
-*/
-
 $('#nav .about li').hover(function () {
 	var target = $(this).first().offsetLeft;
 	$('#nav .nav_bg').animate({
@@ -167,24 +139,6 @@ $('#nav .about li').hover(function () {
 	});
 });
 
-/*
-$('#textbox').click(function(){
-
-	$(this).animate({
-		x:300,
-	mul:{
-		o:50,
-		w:180,
-		h:300,
-		y:200,
-		fontSize:100
-
-	}
-	});
-
-});*/
-
-
 //左侧菜单
 $('#sidebar h2').toggle(function(){
 	$(this).next().animate({
@@ -202,93 +156,6 @@ $('#sidebar h2').toggle(function(){
 	});
 });
 
-
-
-
-
-
-
-/*----V1---banner（）加obj-------//轮播器图片初始化
-//alert($('#banner ul li').getElement(1).innerHTML);
-$('#banner img').css('display','none');
-$('#banner strong').html($('#banner img').getElement(0).alt); //初始化标题
-$('#banner ul li').eq(0).css('color','#333'); //初始化li
-$('#banner img').eq(0).css('display','block');
-
-//自动轮播
-var banner_count = 1;
-//
-setInterval(function(){banner_fn();},1000);
-//
-function banner(){
-	$('#banner img').css('display','none');
-	$('#banner img').eq(banner_count).css('display','block');
-	$('#banner ul li').css('color','#999'); 
-	$('#banner ul li').eq(banner_count).css('color','#333'); 
-	$('#banner strong').html($('#banner img').eq(banner_count).attr('alt'));
-}
-function banner_fn(){
-	if(banner_count >=$('#banner img').length()) banner_count=0;
-	banner();
-	banner_count++;
-}
-//
-//手动轮播器
-$('#banner ul li').hover(function(){
-	//alert($(this).index()); // 0 1 2 
-	$('#banner img').css('display','none');
-	$('#banner img').eq($(this).index()).css('display','block');
-	$('#banner ul li').css('color','#999'); 
-	$('#banner ul li').eq($(this).index()).css('color','#333'); 
-	$('#banner strong').html($('#banner img').eq($(this).index()).attr('alt'));
-},function(){
-
-});*/
-
-/*----V2--改成透明度动画--------//轮播器图片初始化
-//alert($('#banner ul li').getElement(1).innerHTML);
-$('#banner img').css('display','none');
-$('#banner strong').html($('#banner img').getElement(0).alt); //初始化标题
-$('#banner ul li').eq(0).css('color','#333'); //初始化li
-$('#banner img').eq(0).css('display','block');
-
-//自动轮播
-var banner_count = 1;
-//
-var banner_timer = setInterval(banner_fn,1000);
-//图片轮播动画 
-function banner(obj){
-	$('#banner img').css('display','none');
-	$('#banner img').eq($(obj).index()).css('display','block');
-	$(obj).css('color','#999'); 
-	$('#banner ul li').eq(banner_count).css('color','#333'); 
-	$('#banner strong').html($('#banner img').eq($(obj).index()).attr('alt'));
-}
-function banner_fn(){
-	if(banner_count >=$('#banner img').length()) banner_count=0;
-	banner($('#banner ul li').eq(banner_count).first());
-	banner_count++;
-}
-//
-//手动轮播器
-$('#banner ul li').hover(function(){
-	//alert($(this).index()); // 0 1 2 
-	//$('#banner img').css('display','none');
-	//$('#banner img').eq($(this).index()).css('display','block');
-	//$('#banner ul li').css('color','#999'); 
-	//$('#banner ul li').eq($(this).index()).css('color','#333'); 
-	//$('#banner strong').html($('#banner img').eq($(this).index()).attr('alt'));
-	clearInterval(banner_timer); 
-	banner(this);
-},function(){
-	banner_count = $(this).index()+1;
-	banner_timer = setInterval(banner_fn,1000);
-});*/
-
-//轮播器图片初始化
-//alert($('#banner ul li').getElement(1).innerHTML);
-//$('#banner img').css('display','none');
-//$('#banner img').eq(0).css('display','block');
 $('#banner img').opacity(0); 
 $('#banner img').eq(0).opacity(100);
 $('#banner ul li').eq(0).css('color','#333'); //初始化li
@@ -369,36 +236,10 @@ function banner_fn(){
 	banner($('#banner ul li').eq(banner_count).first(),banner_count == 0 ? $('#banner ul li').length()-1 : banner_count-1);
 	banner_count++;
 }
-//
 
-
-//延迟加载
-// 1.当图片进入可视区域时  将src的值替换成xrc的值
-// 当滚动条到元素的最外层顶点开始加载
-// 3.获取页面可视区域的最低点位置
-//$("#wait_load dl dt img")获取的是所有的img元素
-//alert($("#wait_load dl dt img").getElement(0).src); //图片地址
-//alert(debug.getAttribute("xrc")); //自定义属性
-//alert($("#wait_load dl dt img").getElement(0).alt);
-//alert($("#wait_load dl dt img").eq(0).attr('xrc')); //Undefined ?为什么？ 解决  base.js里面存在多个attr定义
-//var wait_load = document.getElementById("wait_load");
-//alert(wait_load.getElementsByTagName('img')[1].getAttribute("xrc")); //P2 
-//alert($(".wait_imgitem").eq(0).attr('xrc'));
-//alert($("#wait_load dl dt img").eq(0).attr('src')); //p6 紫色
-/////$("#wait_load dl dt img").eq(0).attr('src',wait_load.getElementsByTagName('img')[1].getAttribute("xrc"));
-//alert($("#wait_load dl dt img").eq(0).attr('xrc'));
-// 2.
-///alert(offsetTop($("#wait_load dl dt img").first()));
-//3.
-//alert(getInner().height+getScroll().top);
-//
 var wait_load = $(".wait_imgitem");
 wait_load.opacity(0);
 
-//alert($(".wait_imgitem").getElement(0).alt);
-//alert($(".wait_imgitem").ge(0).attr('alt'));
-//alert($(".wait_imgitem"));//obj obj
-//alert($(".wait_imgitem").)
 $(window).bind('scroll',_wait_load);
 $(window).bind('resize',_wait_load);
 
@@ -579,36 +420,5 @@ function _wait_load(){
 
 	 //拖曳
 	pre_load.drag($('#pre_load h2').getElement(0));  
-
-	//图片加载
-	//$('#pre_load .big img').attr('src',temp_img.src).animate({
-	//	attr:'o',
-	//	target:100
-	//}).css('width','600px').css('height','450px').css('top',0).opacity(0);
-
-// 出现问题 1 loding的样式被大图的高和宽改变了  ...图片没加载出来就运行了
-// 问题2  动画的动画效果没有出现
-
-//解决问题一
-	
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-$('#bt').toggle(function(){
-	alert('fn1');
-},function(){
-	alert('fn2');
-});
-
 
 });
